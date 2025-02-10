@@ -1,0 +1,18 @@
+name: failure-notification
+
+on:
+  workflow_run:
+    workflows:
+      - "*"
+    types:
+      - completed
+    branches:
+      - 'main'
+
+obs:
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: run test
+        run: echo "hello"

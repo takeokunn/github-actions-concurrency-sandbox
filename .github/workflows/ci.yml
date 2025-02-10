@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    - name: sleep
+      run: sleep 15
+    - name: Run echo
+      run: echo "hello"
+
