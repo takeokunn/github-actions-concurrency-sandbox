@@ -1,7 +1,6 @@
 name: failure-notification
 
 on:
-  workflow_dispatch:
   workflow_run:
     workflows:
       - "*"
