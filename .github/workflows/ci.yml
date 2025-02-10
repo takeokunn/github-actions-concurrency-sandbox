@@ -6,9 +6,12 @@ on:
       - main
 
 jobs:
-  test:
-    - name: sleep
-      run: sleep 15
-    - name: Run echo
-      run: echo "hello"
+  secretlint:
+    name: Secretlint
+    runs-on: ubuntu-latest
+    steps:
+     - name: sleep
+       run: sleep 20
+     - name: failure
+       run: exit 1
 
